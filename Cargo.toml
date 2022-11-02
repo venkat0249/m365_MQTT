@@ -3,9 +3,9 @@ name = "m365"
 version = "0.1.1"
 edition = "2021"
 license-file = "LICENSE.md"
-description = "A lightweight rust library to receive BLE Xiaomi M365 scooter messages"
+description = "A lightweight rust library with REST Api to receive BLE Xiaomi M365 scooter messages"
 keywords = ["m365", "xiaomi", "electric-scooter", "bluetooth", "ble"]
-repository = "https://github.com/macbury/m365"
+repository = "https://github.com/venkat0249/m365"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
@@ -32,6 +32,10 @@ anyhow = "1.0.53"
 thiserror = "1.0.30"
 tracing = "0.1"
 
+rumqttc = "0.14.0"
+serde_json = "1.0.64"
+chrono = "0.4"
+
 [dev-dependencies]
 tracing-subscriber = { version = "0.3.7", features = ["tracing-log"] }
 
@@ -49,3 +53,6 @@ name = "about"
 
 [[example]]
 name = "settings"
+
+[[example]]
+name = "get_scooter_status"
